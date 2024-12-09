@@ -1,0 +1,204 @@
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+/* Menu Styling */
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 100;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(223, 173, 116, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #f3ac12;
+    border-radius: 5px;
+}
+
+/* Butterfly (Fixed Element) Styling */
+.fixed-element {
+    position: fixed;
+    top: 20%; /* Starts from the top of the page */
+    left: 50%; /* Starts in the center of the page horizontally */
+    transform: translateX(-50%); /* Ensures it's perfectly centered */
+    width: 150px;
+    height: auto;
+    transition: top 5s ease-in-out, left 5s ease-in-out; /* Slower and smoother movement */
+    z-index: 200;
+}
+
+/* Section Styling */
+.section {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Background color of each section */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Content inside each section */
+.content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Text Styling */
+.text {
+    width: 45%;
+    color: white;
+    padding: 20px;
+}
+
+.text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 1.5rem;
+}
+
+/* Image Styling */
+.image {
+    width: 45%;
+    height: 100%;
+    text-align: center;
+    position: relative; /* To ensure the butterfly appears in the correct spot */
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50px;
+    transition: all 1s ease; /* Smooth transition for image to match butterfly's movement */
+}
+
+/* For Section 5 (Full Image with No Text) */
+#section5 .content {
+    display: flex;
+    width: 100vw; /* Ensure the section takes the full width of the screen */
+    height: 100vh; /* Ensure the section takes the full height of the screen */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+}
+
+#section5 .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure content doesn't overflow the container */
+}
+
+#section5 .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make the image cover the entire container while maintaining aspect ratio */
+    object-position: center; /* Center the image inside the container */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Adjusting section padding and ensuring spacing between text and edges */
+.section .text {
+    padding: 20px;
+}
+
+/* Ensuring the butterfly’s smooth movement with section positioning */
+#section1 .content .image img {
+    transition: all 1s ease;
+}
+
+#section2 .content .image img {
+    transition: all 1s ease;
+}
+
+#section3 .content .image img {
+    transition: all 1s ease;
+}
+
+#section4 .content .image img {
+    transition: all 1s ease;
+}
+
+#section5 .content .image img {
+    transition: all 1s ease;
+}
+
+/* Style for all sections */
+.section {
+    padding-top: 60px; /* Adds spacing from the top of the section */
+    position: relative;
+    overflow: hidden; /* Ensures content stays within the section */
+    background-color: #333; /* Consistent background color with menu */
+}
+
+/* Butterfly Movement Adjustment in Sections */
+#section1 .content .image img {
+    width: 100%;
+}
+
+#section2 .content .image img {
+    width: 100%;
+}
+
+#section3 .content .image img {
+    width: 100%;
+}
+
+#section4 .content .image img {
+    width: 100%;
+}
+
+#section5 .content .image img {
+    width: 100%;
+}
